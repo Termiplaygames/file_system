@@ -21,7 +21,7 @@ $misc = $_POST["misc"];
         
 <HTML>
 <head>
-<link href="designp.css" rel="stylesheet" >
+<link href="designm.css" rel="stylesheet" >
 </head>
 <body>
 <?php include './taskleiste.php';?>

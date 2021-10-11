@@ -1,19 +1,29 @@
 <?php
 session_start();
-session_destroy();
+if(!isset($_SESSION['userid'])) {
+    die('Bitte zuerst <a href=medic.php">einloggen</a>');
+}
+
+
  
 
 ?>
 
-<!DOCTYPE html5>
+<!DOCTYPE HTML>
 <html>
 	<head>
-	
+	<script src="https://cdn.tiny.cloud/1/be6h9714ygtflc99vjlfm7ze0x4ipyjhj8n0wxv86wfewq97/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+	<script>
+tinymce.init({
+selector: 'textarea',
+menubar: ''
+});
+</script>
 		<title>
 			Revolution-V.Org - Die Roleplay Revolution
 		</title>
 		
-		<link href="designp.css" rel="stylesheet" >
+		<link href="designm.css" rel="stylesheet" >
 		
 
 		<meta charset="utf-8">
@@ -28,30 +38,57 @@ session_destroy();
 	        
     
 <div class="program_create">
-<div class="blau2">Akten Anlegen<a href="./policeakten.php" class="ROT2">X</a></div>			
+<div class="blau2">Akten Anlegen<a href="./medicakten.php" class="ROT2">X</a></div>			
 
 <br>
-<P>Erstellen sie die Akten gemäss den Vorgaben<p>
-    <form action= "./paction.php" method = "post">
+<div class="fenster">
+	<P>Erstellen sie die Akten gemäss den Vorgaben<p>
+    	<form action= "./paction.php" method = "post">
     
     
-<p> <input name = "adatum" />Anfertigungsdatum</p>
-<p> <input name = "officer" />Name des Mediziners</p>
-<div class="TV">
-<p> <input name = "vor" /> Vorname des Pat.</p>
-<p> <input name = "nach" /> Nachname des Pat.</p>
-<p> <input name = "dob" /> Geburstag des Pat.</p>
-<br>
-<p> <textarea name = "statements" cols="40" rows="5"></textarea>Aussage</p>
+	<p>Anfertigungsdatum <input name = "adatum" /></p>
+	<p>Name des Mediziners <input name = "officer" /></p>
+
+	<p> Vorname des Pat. <input name = "vor" /></p>
+	<p>	Nachname des Pat. <input name = "nach" /> </p>
+	<p> Geburstag des Pat.<input type="date" id="start" name="dob"
+       value="1970-12-31"
+       min="1940-01-01" max="2003-12-31"></p>
+	<br>
+	<p>Aussage <textarea name = "statements" cols="40" rows="5"></textarea></p>
+
+	<p>Unfallzeit <input type="date" id="start" name="time_of_act"
+       value="2021-10-09"
+       min="2021-10-09" max="2030-12-31"></p>
+	<p> Unfallort<input name = "place_of_act" /></p>
+	<br>
+	<p> Unfallhergang<textarea name = "course_of_act" cols="40" rows="5"></textarea></p>
+	<br>
+	<p> Sonstiges*<textarea name = "misc" cols="40" rows="5"></textarea></p>
+
+	<p><input type = "submit"/><input type = "reset" /></p>
+	<p>*
+	<p>Patienten vorgeschichte/Vorerkrannkungen</p>
+
 </div>
-<p> <input name = "time_of_act" />Tatzeit</p>
-<p> <input name = "place_of_act" />Tatort</p>
-<br>
-<p> <textarea name = "course_of_act" cols="40" rows="5"></textarea>Tathergang</p>
-<br>
-<p> <textarea name = "misc" cols="40" rows="5"></textarea>Sonstiges*</p>
 
-<p><input type = "submit" /><input type = "reset" /></p>
+
+
+
+
+
+
+
+
+
+    </form>
+</div>
+<?php include './taskleiste.php';?>
+    </body>
+</html>
+	
+
+
 
 
 

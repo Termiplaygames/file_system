@@ -1,0 +1,455 @@
+body{
+    background-image: url(./src/background.jpg);
+    background-attachment: fixed;
+	background-position: 45% 0%; 
+  text-align:left;
+  
+}
+
+.section{
+position:absolute;
+left: 40em;
+top: 20em;
+    width: 30em;
+    height: 20%;
+    background-color: wheat;
+    text-align:left;
+    border-top: 1em transparent solid;
+    border-left: 2em transparent solid;
+
+}
+.blau{
+    position: absolute;
+    left: -2em;
+    top: -2em;
+    background-color: rgb(0, 4, 255);
+    height: 1.5em;
+    width: 30em;
+}
+.blau2{
+    position: absolute;
+    background-color: rgb(0, 4, 255);
+    height:1.5em;
+    width:60em;
+    color: white;
+}
+.ROT{
+    position:absolute;
+    left: 28.5em;
+    background-color: rgb(255, 0, 0);
+    height: 1.5em;
+    width: 1.5em;
+    text-align-last: center;
+    color: white;
+}
+.ROT2{
+    position:absolute;
+    left: 58em;
+    background-color: rgb(255, 0, 0);
+    height: 1.5em;
+    width: 2em;
+    text-align-last: center;
+    color: white;
+}
+.taskleiste{
+    position: absolute;
+    bottom: 0em;
+    left: 0em;
+    height: 3em;
+    width: 119em;
+    background-color: rgb(0, 26, 255);
+
+}
+.start{
+    background-color: lime;
+    background-image: url(./src/xplogo.png) ;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    width: 8em;
+    height: 4em;
+    position: absolute;
+    left: 0px;
+    border-radius: 1em;
+    text-align: right;
+    color: white;
+    cursor:pointer
+
+}
+.create{
+    background-color: rgb(0, 26, 255);
+    background-image: url(./src/crate.png) ;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 8em;
+    width: 5em;
+    height: 3em;
+    border-color: transparent;
+    cursor:pointer
+}
+
+.search{
+    background-color: rgb(0, 26, 255);
+    background-image: url(./src/search.png) ;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 13em;
+    width: 5em;
+    height: 3em;
+    border-color: transparent;
+    cursor:pointer
+}
+.open{
+    background-color: rgb(0, 26, 255);
+    background-image: url(./src/Windows_Folder_icon-icons.com_55533.png) ;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 5em;
+    height: 3em;
+    border-color: transparent;
+    cursor:pointer
+}
+.pse{
+    background-color: rgb(0, 26, 255);
+    background-image: url(./src/license-plate.png) ;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 28em;
+    width: 5em;
+    height: 3em;
+    border-color: transparent;
+    cursor:pointer
+}
+.help{
+    background-color: rgb(0, 26, 255);
+    background-image: url(./src/question_help_17841.png) ;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 18em;
+    width: 5em;
+    height: 3em;
+    border-color: transparent;
+    cursor:help
+}
+.admin{
+    background-color: rgb(0, 26, 255);
+    background-image: url(./src/admin_user_icon_188317.png) ;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 23em;
+    width: 5em;
+    height: 3em;
+    border-color: transparent;
+}
+.uhr{
+position: absolute;
+right: 0em;
+border: 1em;
+height: 4em;
+width: 4em;
+border-color: aqua solid;
+background-color: aqua;
+color: white;    
+
+}
+.program_create{
+    position: absolute;
+    left: 20em;
+    background-color: wheat;
+    width: 60em;
+    height: 50em;
+}
+.TV{
+    position: absolute;
+    left: 30em;
+    top: 5em;
+}
+
+.fenster {
+  background: transparent;
+  position: absolute;
+  height: 88%;
+  overflow: scroll;
+  width: 100%;
+  border: 1px solid transparent;
+  padding: 10px;
+  top:12%;
+  }
+    .fenster2 {
+        background: transparent;
+        height: 95%;
+        overflow: auto;
+        width: 98%;
+        border: 1px solid transparent;
+        padding: 10px;
+        left: -1.5px;
+        }
+    .greentext{
+        color: greenyellow;
+    }
+
+    /* RESET STYLES & HELPER CLASSES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+    --level-1: #8dccad;
+    --level-2: #f5cc7f;
+    --level-3: #7b9fe0;
+    --level-4: #f27c8d;
+    --black: black;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  ol {
+    list-style: none;
+  }
+  
+  body {
+    margin: 50px 0 100px;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+  }
+  
+  .container2 {
+    max-width: 1000px;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+  
+  .rectangle {
+    position: relative;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  
+  /* LEVEL-1 STYLES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .level-1 {
+    width: 50%;
+    margin: 0 auto 40px;
+    background: var(--level-1);
+  }
+  
+  .level-1::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background: var(--black);
+  }
+  
+  
+  /* LEVEL-2 STYLES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .level-2-wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .level-2-wrapper::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 25%;
+    width: 50%;
+    height: 2px;
+    background: var(--black);
+  }
+  
+  .level-2-wrapper::after {
+    display: none;
+    content: "";
+    position: absolute;
+    left: -20px;
+    bottom: -20px;
+    width: calc(100% + 20px);
+    height: 2px;
+    background: var(--black);
+  }
+  
+  .level-2-wrapper li {
+    position: relative;
+  }
+  
+  .level-2-wrapper > li::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background: var(--black);
+  }
+  
+  .level-2 {
+    width: 70%;
+    margin: 0 auto 40px;
+    background: var(--level-2);
+  }
+  
+  .level-2::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background: var(--black);
+  }
+  
+  .level-2::after {
+    display: none;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-100%, -50%);
+    width: 20px;
+    height: 2px;
+    background: var(--black);
+  }
+  
+  
+  /* LEVEL-3 STYLES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .level-3-wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .level-3-wrapper::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: calc(25% - 5px);
+    width: calc(50% + 10px);
+    height: 2px;
+    background: var(--black);
+  }
+  
+  .level-3-wrapper > li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    width: 2px;
+    height: 20px;
+    background: var(--black);
+  }
+  
+  .level-3 {
+    margin-bottom: 20px;
+    background: var(--level-3);
+  }
+  
+  
+  /* LEVEL-4 STYLES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .level-4-wrapper {
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+  }
+  
+  .level-4-wrapper::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 2px;
+    height: calc(100% + 20px);
+    background: var(--black);
+  }
+  
+  .level-4-wrapper li + li {
+    margin-top: 20px;
+  }
+  
+  .level-4 {
+    font-weight: normal;
+    background: var(--level-4);
+  }
+  
+  .level-4::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-100%, -50%);
+    width: 20px;
+    height: 2px;
+    background: var(--black);
+  }
+  
+  
+  /* MQ STYLES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  @media screen and (max-width: 700px) {
+    .rectangle {
+      padding: 20px 10px;
+    }
+  
+    .level-1,
+    .level-2 {
+      width: 100%;
+    }
+  
+    .level-1 {
+      margin-bottom: 20px;
+    }
+  
+    .level-1::before,
+    .level-2-wrapper > li::before {
+      display: none;
+    }
+    
+    .level-2-wrapper,
+    .level-2-wrapper::after,
+    .level-2::after {
+      display: block;
+    }
+  
+    .level-2-wrapper {
+      width: 90%;
+      margin-left: 10%;
+    }
+  
+    .level-2-wrapper::before {
+      left: -20px;
+      width: 2px;
+      height: calc(100% + 40px);
+    }
+  
+    .level-2-wrapper > li:not(:first-child) {
+      margin-top: 50px;
+    }
+  }
+  
+  
+  

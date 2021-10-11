@@ -1,8 +1,20 @@
 <?php
 session_start();
 include './db.php';
-session_destroy();
+
+session_start();
+if(!isset($_SESSION['userid'])) {
+    die('Bitte zuerst <a href="admin.php">einloggen</a>');
+}
+
+
+
+
+
+
  
+
+
 
 ?>
 

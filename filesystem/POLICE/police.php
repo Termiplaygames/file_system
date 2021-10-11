@@ -13,7 +13,14 @@ if(isset($_GET['login'])) {
     //Überprüfung des Passworts
     if ($user !== false && password_verify($passwort, $user['passwort'])) {
         $_SESSION['userid'] = $user['id'];
-        die('Login erfolgreich. Weiter zu <a href="policeakten.php">internen Bereich</a>');
+        die('<img class="click_gif" src="./src/load.gif"><script language="javascript">
+        function Weiterleitung()
+
+        {
+           location.href="./policeakten.php";
+        }
+        window.setTimeout("Weiterleitung()", 3000);
+    </script>');
     } else {
         $errorMessage = "E-Mail oder Passwort war ungültig<br>";
     }
@@ -24,7 +31,8 @@ if(isset($_GET['login'])) {
 <html> 
 <head>
   <title>Login</title>
-  <link rel="stylesheet" href="designp.css">    
+  <link href="./designpol.css" rel="stylesheet" >
+		   
 </head> 
 <body>
 <div class="section">
@@ -37,10 +45,10 @@ if(isset($errorMessage)) {
  <p>Bitte einloggen zum Fortfahren
 <form action="?login=1" method="post">
 Username:
-<input type="bn" size="40" maxlength="250" name="bn"><br><br>
+<div class=greentext><input type="bn" size="40" maxlength="250" name="bn"><br><br></div>
  
 Passwort:
-<input type="password" size="40"  maxlength="250" name="passwort"><br>
+<div class=greentext><input type="password" size="40"  maxlength="250" name="passwort"><br></div>
  
 <input type="submit" value="Login">
 

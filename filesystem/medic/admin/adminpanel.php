@@ -1,6 +1,14 @@
 <?php
 session_start();
-session_destroy();
+if(!isset($_SESSION['userid'])) {
+    die('Bitte zuerst <a href="admin.php">einloggen</a>');
+}
+
+
+
+
+
+
  
 
 ?>

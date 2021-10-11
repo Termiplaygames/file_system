@@ -13,7 +13,14 @@ if(isset($_GET['login'])) {
     //Überprüfung des Passworts
     if ($user !== false && password_verify($passwort, $user['passwort'])) {
         $_SESSION['userid'] = $user['id'];
-        die('Login erfolgreich. Weiter zu <a href="medicakten.php">internen Bereich</a>');
+        die('<img class="click_gif" src="./src/load.gif"><script language="javascript">
+        function Weiterleitung()
+
+        {
+           location.href="./medicakten.php";
+        }
+        window.setTimeout("Weiterleitung()", 3000);
+    </script>');
     } else {
         $errorMessage = "E-Mail oder Passwort war ungültig<br>";
     }
@@ -24,7 +31,7 @@ if(isset($_GET['login'])) {
 <html> 
 <head>
   <title>Login</title>
-  <link rel="stylesheet" href="designp.css">    
+  <link rel="stylesheet" href="designm.css">    
 </head> 
 <body>
 <div class="section">

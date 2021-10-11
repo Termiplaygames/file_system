@@ -1,6 +1,14 @@
 <?php
 session_start();
-session_destroy();
+if(!isset($_SESSION['userid'])) {
+    die('Bitte zuerst <a href="police.php">einloggen</a>');
+}
+
+
+
+
+
+
  
 
 ?>
@@ -13,7 +21,8 @@ session_destroy();
 			Revolution-V.Org - Die Roleplay Revolution
 		</title>
 		
-		<link href="designp.css" rel="stylesheet" >
+		<link href="./designpol.css" rel="stylesheet" >
+		
 		
 
 		<meta charset="utf-8">
@@ -25,7 +34,7 @@ session_destroy();
 	        <header>
      
             </header>
-	        
+	        <a href="./rechner.php" class="rechner_verknuepfung"><button>Taschenrechner</button></a>
            
             
 				<?php include './taskleiste.php';?>

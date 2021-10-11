@@ -1,0 +1,56 @@
+pactionupdate.php
+
+
+$search = $_POST["search"];
+$sql = "SELECT * FROM policeakten WHERE ID = $search";
+foreach ($pdo -> query($sql) as $row) {
+        $adatumold = $_row["adatum"];
+        $officerold = $_row["officer"];
+        $vorold = $_row["vor"];
+        $nachold = $_row["nach"];
+        $dobold = $_row["dob"];
+        $statementsold = $_row["statements"]; 
+        $time_of_actold = $_row["time_of_act"];
+        $place_of_actold = $_row["place_of_act"];
+        $course_of_actold = $_row["course_of_act"];
+        $miscold = $_row["misc"];}
+
+
+
+
+        $adatum = $_row["adatum"].$_POST["adatumnew"];
+$officer = $_row["officer"].$_POST["officernew"];
+$vor = $_row["vor"].$_POST["vornew"];
+$nach = $_row["nach"].$_POST["nachnew"];
+$dob = $_row["dob"].$_POST["dobnew"];
+$statements = $_row["statements"].$_POST["statementsnew"];
+$time_of_act = $_row["time_of_act"].$_POST["time_of_actnew"];
+$place_of_act = $_row["place_of_act"].$_POST["place_of_actnew"];
+$course_of_act = $_row["course_of_act"].$_POST["course_of_actnew"];
+$misc = $_row["misc"].$_POST["miscnew"];
+
+
+
+
+$adatum = $_row["adatum"].$_POST["adatumnew"];
+$officer = $_row["officer"].$_POST["officernew"];
+$vor = $_row["vor"].$_POST["vornew"];
+$nach = $_row["nach"].$_POST["nachnew"];
+$dob = $_row["dob"].$_POST["dobnew"];
+$statements = $_row["statements"].$_POST["statementsnew"];
+$time_of_act = $_row["time_of_act"].$_POST["time_of_actnew"];
+$place_of_act = $_row["place_of_act"].$_POST["place_of_actnew"];
+$course_of_act = $_row["course_of_act"].$_POST["course_of_actnew"];
+$misc = $_row["misc"].$_POST["miscnew"];
+       
+       $statement = $pdo->prepare("UPDATE policeakten (ID, adatum, officer, vor, nach, dob, statements, time_of_act, place_of_act, course_of_act, misc ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $statement->execute(array('', $adatum, $officer,$vor,$nach,$dob,$statements,$time_of_act,$place_of_act,$course_of_act,$misc)); 
+        ?>
+        
+
+
+        echo $PDO->rowCount() . " records UPDATED successfully";
+       $statement = $pdo->prepare("UPDATE policeakten SET adatum = $adatum, officer = $officer, vor = $vor, nach = $nach, dob = $dob, statements = $statements,time_of_act = time_of_act, place_of_act = $place_of_act, course_of_act = :$course_of_act, misc = $misc, WHERE ID = $search");
+        $statement->execute(); 
+        ?>
+  

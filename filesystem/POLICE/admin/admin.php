@@ -1,6 +1,8 @@
 <?php 
 session_start();
 include './db.php';
+
+
  
 if(isset($_GET['login'])) {
     $email = $_POST['bn'];

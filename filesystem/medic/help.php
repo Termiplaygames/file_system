@@ -1,4 +1,17 @@
-<!DOCTYPE html5>
+<?php
+session_start();
+if(!isset($_SESSION['userid'])) {
+    die('Bitte zuerst <a href="medic.php">einloggen</a>');
+}
+
+
+
+
+
+
+ 
+
+?><!DOCTYPE html5>
 <html>
 	<head>
 	
@@ -6,7 +19,7 @@
 			Revolution-V.Org - Die Roleplay Revolution
 		</title>
 		
-		<link href="designp.css" rel="stylesheet" >
+		<link href="designm.css" rel="stylesheet" >
 		
 
 		<meta charset="utf-8">

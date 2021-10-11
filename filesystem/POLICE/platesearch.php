@@ -3,8 +3,7 @@ session_start();
 if(!isset($_SESSION['userid'])) {
     die('Bitte zuerst <a href="police.php">einloggen</a>');
 }
-?>
-<!DOCTYPE html5>
+?><!DOCTYPE html5>
 <html>
 	<head>
 	
@@ -13,6 +12,7 @@ if(!isset($_SESSION['userid'])) {
 		</title>
 		
 		<link href="./designpol.css" rel="stylesheet" >
+		
 		
 
 		<meta charset="utf-8">
@@ -38,25 +38,21 @@ if(!isset($_SESSION['userid'])) {
 <div class="fenster">
 <?php
 error_reporting(0);
-include './db.php';
+include './db2.php';
 $search = $_POST["search"];
-$sql = "SELECT * FROM policeakten WHERE ID LIKE '%$search%' OR adatum LIKE '%$search%' OR officer LIKE '%$search%' OR vor LIKE '%$search%' OR nach LIKE '%$search%' OR dob LIKE '%$search%' OR time_of_act LIKE '%$search%' OR place_of_act LIKE '%$search%'";
+$sql = "SELECT * FROM owned_vehicles,users WHERE `plate` LIKE '%$search%' And users.identifier = owned_vehicles.owner" ;
 foreach ($pdo->query($sql) as $row) {
-   echo $row['ID']."<br />";
-   echo $row['vor']." ".$row['nach'].".<br />";
-   echo "geboren am: ".$row['dob'].".<br />";
-   echo "Tatzeitpunkt: ".$row['adatum'].".<br />";
-   echo "Aussage: ".$row['statements'].".<br />";
-   echo "Tatzeit: ".$row['time_of_act'].".<br />";
-   echo "Tatort: ".$row['time_of_act'].".<br />";
-   echo "Tathergang: ".$row['course_of_act'].".<br />";
-   echo "Sonstiges: ".$row['misc'].".<br />";
-   echo "<hr>";
+	echo "Kennzeichen      |        Modell      |        Modell<br>";
+   echo $row['plate']." | ".$row['model']." | ".$row['flag']."<br />";
+   echo "Fahrzeughalter:<br>"; 
+   echo $row['lastname']." ".$row['firstname']."<br />";
+   echo "<hr><br />";
+   
 }
+
+
 ?>
 </div>
-
-
 <br>
 
 
